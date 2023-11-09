@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "A calculator created with HTML,CSS and Javascript" content = "This is my calculator project.">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <audio id="buttonSound" src="./assets/bipe.mp3"></audio>
+    <div data-bs-theme="dark" class="container-fluid container-xxl mt-5">
+        <div class="w-100" style="height: 600px;border-radius: 24px;">
+          <div class="container-fluid container-xxl mt-5 card w-50">
+            <h3 class="text-center text-dark fw-bold fs-1"></h3>
+            <div class="mt-3 container-fluid container-xxl w-50">
+              <div class="calculator">
+                <input type="text" class="form-control" id="display" readonly>
+                <div class="buttons">
+                  <button class="btn bg-light text-dark " onclick="clearDisplay()">C</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('7')">7</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('8')">8</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('9')">9</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('+')">+</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('4')">4</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('5')">5</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('6')">6</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('-')">-</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('1')">1</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('2')">2</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('3')">3</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('*')">*</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('0')">0</button>
+                  <button class="btn bg-light text-dark " onclick="appendToDisplay('.')">.</button>
+                  <button  class="btn bg-light text-dark "onclick="appendToDisplay('/')" >/</button>
+                 
+                   </div>
+            
+                 <button id="egal" onclick="calculateResult()">=</button>
+                 
+                 <!-- call 'toggleState' whenever clicked -->
+                <input type="button" id="btn" value="On / Off" 
+                class="off" onclick="toggleState(this)" />
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
